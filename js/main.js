@@ -131,20 +131,45 @@
   function counterAnimation() {
     $(".counter").each(function () {
       var $this = $(this).find("h1");
-      var countTo = $this.text();
+      var countTo = $this.data("target"); // Read from data-target
+      var currentVal = $this.text(); // Store original text (e.g., 1.2M+)
+      var isPercentage = currentVal.includes("%");
+      var isMillions = currentVal.includes("M");
+      var isThousands = currentVal.includes("K");
 
       $({ countNum: 0 }).animate(
         {
           countNum: countTo,
         },
         {
-          duration: 2000,
-          easing: "linear",
+          duration: 2500, // Slightly longer duration
+          easing: "swing", // Smoother easing
           step: function () {
-            $this.text(Math.floor(this.countNum));
+            let num = Math.floor(this.countNum);
+            let displayNum = num.toLocaleString("es-ES"); // Format number
+            if (isPercentage) {
+              $this.text(num + "%");
+            } else if (isMillions && num >= 1000000) {
+              $this.text((num / 1000000).toFixed(1) + "M+");
+            } else if (isThousands && num >= 1000) {
+              $this.text((num / 1000).toFixed(0) + "K+");
+            } else {
+              $this.text(displayNum + (currentVal.includes("+") ? "+" : "")); // Add + back if it was there
+            }
           },
           complete: function () {
-            $this.text(this.countNum);
+            // Ensure final value matches original format
+            let num = this.countNum;
+            let displayNum = parseFloat(num).toLocaleString("es-ES");
+            if (isPercentage) {
+              $this.text(num + "%");
+            } else if (isMillions) {
+              $this.text((num / 1000000).toFixed(1) + "M+");
+            } else if (isThousands) {
+              $this.text((num / 1000).toFixed(0) + "K+");
+            } else {
+              $this.text(displayNum + (currentVal.includes("+") ? "+" : ""));
+            }
           },
         }
       );
@@ -152,8 +177,9 @@
   }
 
   // Only trigger counter animation when element is in viewport
+  let counterAnimated = false; // Flag to prevent re-animation
   $(window).scroll(function () {
-    if ($(".counter").length) {
+    if ($(".counter").length && !counterAnimated) {
       var scrollTop = $(window).scrollTop();
       var elementOffset = $(".counter").first().offset().top;
       var distance = elementOffset - scrollTop;
@@ -161,8 +187,8 @@
 
       if (distance < windowHeight - 100) {
         counterAnimation();
-        // Remove scroll handler after animation triggered
-        $(window).off("scroll");
+        counterAnimated = true; // Set flag
+        // $(window).off('scroll'); // We might want other scroll events
       }
     }
   });
