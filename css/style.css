@@ -68,7 +68,7 @@
 }
 
 .btn.border-secondary:hover {
-  background: var(--bs-secondary) !important;
+  background: #0a2342 !important;
   color: var(--bs-white) !important;
 }
 
@@ -105,12 +105,12 @@
 }
 
 .topbar .top-link a small:hover {
-  color: var(--bs-secondary) !important;
+  color: #0a2342 !important;
   transition: 0.5s;
 }
 
 .topbar .top-link a small:hover i {
-  color: var(--bs-primary) !important;
+  color: #f58220 !important;
 }
 /*** Topbar End ***/
 
@@ -130,7 +130,7 @@
 .navbar .navbar-nav .nav-link.active,
 .fixed-top.bg-white .navbar .navbar-nav .nav-link:hover,
 .fixed-top.bg-white .navbar .navbar-nav .nav-link.active {
-  color: var(--bs-primary);
+  color: #f58220;
 }
 
 .navbar .dropdown-toggle::after {
@@ -156,8 +156,8 @@
 }
 
 .dropdown .dropdown-menu a:hover {
-  background: var(--bs-secondary);
-  color: var(--bs-primary);
+  background: #0a2342;
+  color: #f58220;
 }
 
 .navbar .nav-item:hover .dropdown-menu {
@@ -193,7 +193,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 25px;
-  background: linear-gradient(rgba(255, 181, 36, 0.7), rgba(255, 181, 36, 0.7));
+  background: linear-gradient(rgba(245, 130, 32, 0.7), rgba(245, 130, 32, 0.7));
 }
 
 .carousel-control-next,
@@ -202,7 +202,7 @@
   height: 48px;
   border-radius: 48px;
   border: 1px solid var(--bs-white);
-  background: var(--bs-primary);
+  background: #f58220;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -251,12 +251,12 @@
   content: "";
   width: 35px;
   height: 35px;
-  background: var(--bs-secondary);
+  background: #0a2342;
   position: absolute;
   bottom: -10px;
   transform: translate(-50%);
   transform: rotate(45deg);
-  background: var(--bs-secondary);
+  background: #0a2342;
 }
 /*** featurs End ***/
 
@@ -274,7 +274,7 @@
 
 /*** Fruits Start ***/
 .fruite .tab-class .nav-item a.active {
-  background: var(--bs-secondary) !important;
+  background: #0a2342 !important;
 }
 
 .fruite .tab-class .nav-item a.active span {
@@ -290,7 +290,7 @@
 }
 
 .fruite .fruite-categorie .fruite-name a:hover {
-  color: var(--bs-secondary);
+  color: #0a2342;
 }
 
 .fruite .fruite-item {
@@ -349,15 +349,15 @@
   position: absolute;
   top: -8px;
   right: 0;
-  color: var(--bs-primary);
+  color: #f58220;
   padding: 5px 25px;
-  border: 1px solid var(--bs-secondary);
+  border: 1px solid #0a2342;
   border-radius: 20px;
   transition: 0.5s;
 }
 
 .vesitable .owl-nav .owl-prev:hover {
-  background: var(--bs-secondary);
+  background: #0a2342;
   color: var(--bs-white);
 }
 
@@ -365,22 +365,22 @@
   position: absolute;
   top: -8px;
   right: 88px;
-  color: var(--bs-primary);
+  color: #f58220;
   padding: 5px 25px;
-  border: 1px solid var(--bs-secondary);
+  border: 1px solid #0a2342;
   border-radius: 20px;
   transition: 0.5s;
 }
 
 .vesitable .owl-nav .owl-next:hover {
-  background: var(--bs-secondary);
+  background: #0a2342;
   color: var(--bs-white);
 }
 /*** vesitable End ***/
 
 /*** Banner Section Start ***/
 .banner .banner-btn:hover {
-  background: var(--bs-primary);
+  background: #f58220;
 }
 /*** Banner Section End ***/
 
@@ -397,7 +397,7 @@
 }
 
 .counter h4 {
-  color: var(--bs-primary);
+  color: #f58220;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -412,15 +412,15 @@
   position: absolute;
   top: -58px;
   right: 0;
-  color: var(--bs-primary);
+  color: #f58220;
   padding: 5px 25px;
-  border: 1px solid var(--bs-secondary);
+  border: 1px solid #0a2342;
   border-radius: 20px;
   transition: 0.5s;
 }
 
 .testimonial .owl-nav .owl-prev:hover {
-  background: var(--bs-secondary);
+  background: #0a2342;
   color: var(--bs-white);
 }
 
@@ -428,15 +428,15 @@
   position: absolute;
   top: -58px;
   right: 88px;
-  color: var(--bs-primary);
+  color: #f58220;
   padding: 5px 25px;
-  border: 1px solid var(--bs-secondary);
+  border: 1px solid #0a2342;
   border-radius: 20px;
   transition: 0.5s;
 }
 
 .testimonial .owl-nav .owl-next:hover {
-  background: var(--bs-secondary);
+  background: #0a2342;
   color: var(--bs-white);
 }
 /*** testimonial End ***/
@@ -451,22 +451,22 @@
   padding: 10px 16px;
   text-decoration: none;
   transition: 0.5s;
-  border: 1px solid var(--bs-secondary);
+  border: 1px solid #0a2342;
   margin: 0 4px;
 }
 
 .pagination a.active {
-  background-color: var(--bs-primary);
+  background-color: #f58220;
   color: var(--bs-light);
-  border: 1px solid var(--bs-secondary);
+  border: 1px solid #0a2342;
 }
 
 .pagination a:hover:not(.active) {
-  background-color: var(--bs-primary);
+  background-color: #f58220;
 }
 
 .nav.nav-tabs .nav-link.active {
-  border-bottom: 2px solid var(--bs-secondary) !important;
+  border-bottom: 2px solid #0a2342 !important;
 }
 /*** Single Page End ***/
 
@@ -478,7 +478,7 @@
 }
 
 .footer .footer-item .btn-link:hover {
-  color: var(--bs-secondary) !important;
+  color: #0a2342 !important;
 }
 
 .footer .footer-item p.mb-4 {
